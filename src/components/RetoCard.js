@@ -25,6 +25,8 @@ class RetoCard extends HTMLElement {
 
       .banner {
         border-radius: 12px 12px 0px 0px;
+        border-bottom: 3px solid #000;
+        filter: grayscale(100%);
       }
 
       .avatar {
