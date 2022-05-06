@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  src:
+    url("fonts/Montserrat-Light.woff2"),
+    url("fonts/Montserrat-Light.woff"),
+    url("fonts/Montserrat-Light.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: italic;
+  src:
+    url("fonts/Montserrat-MediumItalic.woff2"),
+    url("fonts/Montserrat-MediumItalic.woff"),
+    url("fonts/Montserrat-MediumItalic.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  src:
+    url("fonts/Montserrat-SemiBold.woff2"),
+    url("fonts/Montserrat-SemiBold.woff"),
+    url("fonts/Montserrat-SemiBold.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 300;
+  src:
+    url("fonts/Poppins-Light.woff2"),
+    url("fonts/Poppins-Light.woff"),
+    url("fonts/Poppins-Light.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  src:
+    url("fonts/Poppins-Bold.woff2"),
+    url("fonts/Poppins-Bold.woff"),
+    url("fonts/Poppins-Bold.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(90deg, #ff386788, #ffc873, #d37ec666);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
