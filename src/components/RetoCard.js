@@ -9,13 +9,14 @@ class RetoCard extends HTMLElement {
   static get styles() {
     return /* css */`
       :host {
-        
+        --bg-color: #fafafa;
+        --text-color: #7c7c7c;
       }
 
       .container {
         width: 450px;
         height: 600px;
-        background-color: #fafafa;
+        background-color: var(--bg-color);
         border-radius: 12px;
         box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
         font-family: Montserrat, sans-serif;
@@ -57,7 +58,7 @@ class RetoCard extends HTMLElement {
         font-weight: 300;
         font-style: italic;
         font-size: 15px;
-        color: #7C7C7C;
+        color: var(--text-color);
         margin-top: 0.3rem;
       }
       .location img {
@@ -77,6 +78,11 @@ class RetoCard extends HTMLElement {
       }
 
       .btn-follow {
+        text-decoration: none;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 121px;
         height: 38px;
         border-radius: 19px;
@@ -86,6 +92,7 @@ class RetoCard extends HTMLElement {
         transform: translateX(-50%);
         margin-top: 2rem;
         font-weight: 600;
+        color: #000;
       }
       .btn-follow:hover {
         cursor: pointer;
@@ -123,7 +130,7 @@ class RetoCard extends HTMLElement {
           <span class="text-location">Cochabamba, Bolivia</span>
         </div>
         <p class="description">Pablo es un desarrollador web y electrónico, trabaja con tecnologías HTML, CSS, Javascript y Sistemas embebidos. Aficionado al diseño y al mundo maker. <strong>Aprendiz de todo, maestro de nada.</strong></p>
-        <button class="btn-follow">FOLLOW</button>
+        <a href="https://twitter.com/pablocyc?ref_src=twsrc%5Etfw" class="btn-follow" data-show-count="false" target="_blank">Follow</a>
       </main>
       <social-footer></social-footer>
     </div>`;

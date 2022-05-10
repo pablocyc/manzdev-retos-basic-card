@@ -48,19 +48,19 @@ class SocialFooter extends HTMLElement {
       <div class="posts">
         <p>Posts</p>
         <img src="icons/icon-edit.svg" alt="icon edit" class="icon">
-        <span>1,042</span>
+        <span>480</span>
       </div>
       <div class="line"></div>
       <div class="followers">
       <p>Followers</p>
       <img src="icons/icon-user.svg" alt="icon followers" class="icon">
-        <span>34,205</span>
+        <span>56</span>
       </div>
       <div class="line"></div>
       <div class="following">
         <p>Following</p>
         <img src="icons/icon-user.svg" alt="icon following" class="icon">
-        <span>1,308</span>
+        <span>649</span>
       </div>
     </div>`;
   }
