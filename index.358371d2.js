@@ -1,4 +1,4 @@
-const l=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const e of o)if(e.type==="childList")for(const s of e.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&r(s)}).observe(document,{childList:!0,subtree:!0});function a(o){const e={};return o.integrity&&(e.integrity=o.integrity),o.referrerpolicy&&(e.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?e.credentials="include":o.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function r(o){if(o.ep)return;o.ep=!0;const e=a(o);fetch(o.href,e)}};l();class i extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+const l=function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))n(o);new MutationObserver(o=>{for(const e of o)if(e.type==="childList")for(const s of e.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&n(s)}).observe(document,{childList:!0,subtree:!0});function a(o){const e={};return o.integrity&&(e.integrity=o.integrity),o.referrerpolicy&&(e.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?e.credentials="include":o.crossorigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function n(o){if(o.ep)return;o.ep=!0;const e=a(o);fetch(o.href,e)}};l();class i extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
         
       }
@@ -33,29 +33,30 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       <div class="posts">
         <p>Posts</p>
         <img src="icons/icon-edit.svg" alt="icon edit" class="icon">
-        <span>1,042</span>
+        <span>480</span>
       </div>
       <div class="line"></div>
       <div class="followers">
       <p>Followers</p>
       <img src="icons/icon-user.svg" alt="icon followers" class="icon">
-        <span>34,205</span>
+        <span>56</span>
       </div>
       <div class="line"></div>
       <div class="following">
         <p>Following</p>
         <img src="icons/icon-user.svg" alt="icon following" class="icon">
-        <span>1,308</span>
+        <span>649</span>
       </div>
-    </div>`}}customElements.define("social-footer",i);class n extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
+    </div>`}}customElements.define("social-footer",i);class r extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}static get styles(){return`
       :host {
-        
+        --bg-color: #fafafa;
+        --text-color: #7c7c7c;
       }
 
       .container {
         width: 450px;
         height: 600px;
-        background-color: #fafafa;
+        background-color: var(--bg-color);
         border-radius: 12px;
         box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1);
         font-family: Montserrat, sans-serif;
@@ -97,7 +98,7 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         font-weight: 300;
         font-style: italic;
         font-size: 15px;
-        color: #7C7C7C;
+        color: var(--text-color);
         margin-top: 0.3rem;
       }
       .location img {
@@ -117,6 +118,11 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
       }
 
       .btn-follow {
+        text-decoration: none;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 121px;
         height: 38px;
         border-radius: 19px;
@@ -126,6 +132,7 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         transform: translateX(-50%);
         margin-top: 2rem;
         font-weight: 600;
+        color: #000;
       }
       .btn-follow:hover {
         cursor: pointer;
@@ -140,7 +147,7 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
         position: absolute;
       }
     `}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=`
-    <style>${n.styles}</style>
+    <style>${r.styles}</style>
     <div class="container">
       <header>
         <img src="images/banner.jpg" alt="banner" class="banner">
@@ -155,7 +162,7 @@ const l=function(){const t=document.createElement("link").relList;if(t&&t.suppor
           <span class="text-location">Cochabamba, Bolivia</span>
         </div>
         <p class="description">Pablo es un desarrollador web y electr\xF3nico, trabaja con tecnolog\xEDas HTML, CSS, Javascript y Sistemas embebidos. Aficionado al dise\xF1o y al mundo maker. <strong>Aprendiz de todo, maestro de nada.</strong></p>
-        <button class="btn-follow">FOLLOW</button>
+        <a href="https://twitter.com/pablocyc?ref_src=twsrc%5Etfw" class="btn-follow" data-show-count="false" target="_blank">Follow</a>
       </main>
       <social-footer></social-footer>
-    </div>`}}customElements.define("reto-card",n);
+    </div>`}}customElements.define("reto-card",r);
